@@ -1,0 +1,837 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.root {
+    width: 100%;
+    height: 100svh;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.root img.char {
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: hopIn 1s ease-in-out;
+}
+
+
+img.windowsxp {
+    opacity: 0;
+    animation: xp 3s linear;
+}
+
+
+@keyframes xp {
+    1% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+
+}
+@keyframes hopIn {
+    from {
+        transform: translate(0px, 100%);
+    }
+    to {
+        transform: translate(0px, 0px);
+    }
+}
+
+
+.root img.full {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.lotionCover {
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    position: absolute;
+    z-index: 9;
+}
+.lotionCover img.image {
+    width: 15%;
+    position: absolute;
+    top: 55%;
+    left: 9%;
+
+    z-index: 100;
+    animation: lotionBottle 1s ease-in-out infinite;
+
+}
+
+
+@keyframes lotionBottle {
+    50% {
+        scale: 1.05;
+    }
+}
+
+.appsCover {
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    position: absolute;
+}
+
+
+
+.appsCover img.image {
+    width: 15%;
+    position: absolute;
+    top: 55%;
+    left: 9%;
+
+    z-index: 100;
+    animation: lotionBottle 1s ease-in-out infinite;
+}
+
+.appsCover img.image:hover {
+    opacity: 0.8;
+}
+
+.apps {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    top: 20%;
+    left: 15%;
+    gap: 0.5rem;
+    width: 19%;
+}
+.appsLine {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 1rem;
+}
+.apps .app {
+    width: 100%;
+    max-width: 30%;
+    min-width: 30%;
+    min-height: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.app:hover {
+    opacity: 0.8;
+    scale: 0.95;
+}
+
+.app p {
+    color: black;
+    /* -webkit-text-stroke: 0.2px black; */
+    /* text-shadow: 0 0 2px rgb(0, 0, 0, 0.8); */
+
+    -webkit-text-stroke: 0.2px black;
+    color: white;
+    text-shadow: 0 0 3px rgb(0, 0, 0);
+}
+
+.app img {
+    width: 90%;
+}
+
+
+
+
+@media only screen and (max-width: 1300px) {
+  
+    .appsCover.full.one {
+        top: 20vh;
+        width: 100%;
+        height: unset; 
+    }
+    .apps {
+        left: 10%;
+    }
+
+    .appsCover.full.one img.image {
+        top: 34vw;
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .root img.full.one {
+        top: 20vh;
+        width: 100%;
+        height: unset;
+    }
+    .appsCover.full.one {
+        top: 20vh;
+        width: 100%;
+        height: unset; 
+    }
+    .lotionCover.full.one {
+        top: 20vh;
+        width: 100%;
+        height: unset; 
+        padding: 60% 0 0 0;
+    }
+    
+    .apps {
+        padding: 10% 0;
+        left: 15%;
+        font-size: 0.7rem;
+    }
+    .root img.char {
+        height: 70%;
+    }
+    .lotionCover img.image {
+        left: 9%;
+    }
+
+}
+@media only screen and (max-width: 850px) {
+    .root img.full.one {
+        top: 30vh;
+    }
+    .root img.char {
+        height: 60%;
+    }
+    .appsCover.full.one {
+        top: 30vh;
+    }
+    .lotionCover.full.one {
+        top: 30vh;
+    }
+    .apps {
+        width: 27%;
+    }
+    .app p {
+        font-size: 0.9rem;
+    }
+
+}
+
+
+@media only screen and (max-width: 650px) {
+    .root img.full.one {
+        top: 35vh;
+        width: 110%;
+    }
+
+    .root img.char {
+        height: 55%;
+    }
+    .appsCover.full.one {
+        top: 35vh;
+        width: 110%;
+    }
+    .lotionCover.full.one {
+        top: 35vh;
+        width: 110%;
+        padding: 70% 0 0 0;
+
+    }
+    .apps {
+        font-size: 0.6rem;
+        width: 27%;
+    }
+    .app p {
+        font-size: 0.7rem;
+    }
+
+
+    .appsCover.full.one img.image {
+        top: 37vw;
+    }
+
+
+}
+
+@media only screen and (max-width: 500px) {
+    .root img.full.one {
+        top: 40vh;
+        width: 120%;
+    }
+
+    .root img.char {
+        height: unset;
+        width: 70%;
+    }
+
+    .appsCover.full.one {
+        top: 40vh;
+        width: 120%;
+    }
+    .lotionCover.full.one {
+        top: 40vh;
+        width: 120%;
+    }
+    .apps {
+        font-size: 0.65rem;
+        width: 27%;
+        font-weight: bold;
+        color: white;
+    }
+   
+    
+    .appsCover.full.one img.image {
+        top: 40vw;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .root img.full.one {
+        top: 43vh;
+        width: 120%;
+    }
+
+    .appsCover.full.one {
+        top: 44vh;
+        width: 120%;
+    }
+    .lotionCover.full.one {
+        top: 44vh;
+        width: 120%;
+    }
+   
+}
+
+
+
+
+.poster {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: fixed;
+    top: 10%;
+    left: 0;
+
+    display: none;
+}
+.poster img {
+    width: 40%;
+}
+
+
+
+@media only screen and (max-width: 460px) {
+    .poster {
+        display: flex;
+    }
+}
+
+
+.memes {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(0, 0, 0, 0.4);
+
+    display: none;
+}
+
+.popup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black;
+    border-top: white 5px solid;
+    border-left: white 5px solid;
+    animation: scaleIn 0.3s linear;
+    transition: 0.3s;
+}
+.bar {
+    width: 100%;
+    max-width: 900px;
+    min-height: 40px;
+    background-color: #515151;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 1.2rem;
+    position: relative;
+}
+p.x {
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 2px 0 0 ;
+    padding: 0 0 3.5px 0;
+}
+
+.memes .memepopup {
+    width: 100%;
+    padding: 3rem 1rem;
+    max-width: 900px;
+    height: 600px;
+    background-color: #f3f3f3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    gap: 1.5rem;
+
+
+}
+.memewrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+}
+
+p.suprise {
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e2e2e2;
+    padding: 0.5rem 0;
+}
+
+.memepopup .meme  {
+    width: 90px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+}
+.memepopup .meme:hover {
+    opacity: 0.9;
+    scale: .95;
+}
+.meme img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: black;
+    border: 2px solid black;
+
+}
+
+
+@media only screen and (max-width: 1000px) {
+   
+
+ .popup {
+    max-width: 90%;
+    height: 600px;
+ }
+ .memepopup .meme  {
+    width: 80px;
+ }
+
+}
+
+@media only screen and (max-width: 500px) {
+   
+
+    .popup {
+       max-width: 90%;
+       height: 600px;
+    }
+    .memepopup .meme  {
+       width: 70px;
+       margin: 0 4px;
+    }
+   
+   }
+   
+   
+
+
+
+/* Base scrollbar styles */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+    height: 12px; /* Height of the scrollbar for horizontal scroll */
+}
+
+/* Track (part of the scrollbar not covered by the handle) */
+::-webkit-scrollbar-track {
+    background: #f3f3f3; /* Color of the track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+/* Handle (part of the scrollbar that the user drags) */
+::-webkit-scrollbar-thumb {
+    background: #515151; /* Color of the scrollbar handle */
+    border-radius: 10px; /* Rounded corners for the handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background:#515151; /* Color of the handle on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Basic styling for the popup */
+
+.popupz {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgb(0, 0, 0, 0.4);
+
+    display: none;
+}
+
+ .popupzWrapper {
+    position: fixed;
+    background-color: #e2e2e2;
+    border: 5px solid black;
+    border-top: white 5px solid;
+    border-left: white 5px solid;
+    z-index: 100;
+    width: 80%;
+    max-width: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    animation: scaleIn 0.3s linear;
+    transition: 0.3s;
+
+}
+.popupzWrapper img {
+    margin: 1rem 0 0 0;
+    width: 80%;
+}
+.popupzWrapper button {
+    margin: 1rem 0;
+    width: 300px;
+    height: 50px;
+    border: 5px solid black;
+    border-top: white 5px solid;
+    border-left: white 5px solid;
+    font-size: 1.5rem;
+    user-select: none;
+}
+
+@media only screen and (max-width: 500px) {
+.popupzWrapper button {
+    width: 240px;
+}
+}
+
+
+.bar {
+    user-select: none;
+}
+
+.popupzWrapper button:hover {
+    opacity: 0.9;
+    scale: 0.95;
+    background-color: #cacaca;
+}
+
+
+
+
+@keyframes scaleIn {
+    from {
+        scale: 0;
+    }
+    to {
+        scale: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.funnypop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgb(0, 0, 0, 0.4);
+
+    display: none;
+}
+
+ .funnypopwrapper {
+    position: fixed;
+    background-color: #e2e2e2;
+    border: 5px solid black;
+    border-top: white 5px solid;
+    border-left: white 5px solid;
+    z-index: 100;
+    width: 80%;
+    max-width: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    animation: scaleIn 0.3s linear;
+    transition: 0.3s;
+
+}
+.funnypopwrapper img {
+    width: 100%;
+}
+
+
+
+@media only screen and (max-width: 500px) {
+    
+    .bar p.text {
+        font-size: 1rem;
+    }
+}
+
+
+
+/* .textz {
+    display: none;
+} */
+
+.texts {
+    width: 100%;
+    padding: 3rem 1rem;
+    max-width: 600px;
+    height: 600px;
+    background-color: #f3f3f3;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    gap: 1.5rem;
+}
+.texts h3 {
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+
+}
+.texts p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+}
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #515151;
+    color: white;
+    font-size: 1.3rem;
+    padding: 1rem;
+    gap: 0.5rem;
+}
+.link p:nth-child(1) {
+    font-weight: bold;
+}
+
+.link a:nth-child(2) {
+    text-decoration: underline;
+    color: blue;
+    word-wrap: break-word; /* Ensures long words break onto the next line */
+    word-break: break-word; /* Helps in breaking long words */
+    overflow-wrap: break-word; /* Ensures text will wrap if it overflows */
+    white-space: normal; /* Allows the text to wrap and not be in a single line */
+    max-width: 100%; /* Ensures the element does not exceed the width of its container */
+}
+ 
+
+.texts img {
+    width: 200px;
+}
+
+
+.popupabout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black;
+    border-top: white 5px solid;
+    border-left: white 5px solid;
+    animation: scaleIn 0.3s linear;
+    transition: 0.3s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.popupx {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgb(0, 0, 0, 0.4);
+
+    display: none;
+}
+
+ .popupxWrapper {
+    position: fixed;
+    background-color: #e2e2e2;
+    border: 5px solid black;
+    border-top: white 5px solid;
+    border-left: white 5px solid;
+    z-index: 100;
+    width: 80%;
+    max-width: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    animation: scaleIn 0.3s linear;
+    transition: 0.3s;
+
+}
+.popupxWrapper video {
+    margin: 1rem 0 0 0;
+    width: 250px;
+}
+.popupxWrapper button {
+    margin: 1rem 0;
+    width: 300px;
+    height: 50px;
+    border: 5px solid black;
+    border-top: white 5px solid;
+    border-left: white 5px solid;
+    font-size: 1.5rem;
+    user-select: none;
+}
+
+@media only screen and (max-width: 500px) {
+.popupxWrapper button {
+    width: 240px;
+}
+}
+
+
+.popupxWrapper button:hover {
+    opacity: 0.9;
+    scale: 0.95;
+    background-color: #cacaca;
+}
+
+
+
+
