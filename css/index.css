@@ -1,6 +1,6 @@
 .image-container {
             position: relative;
-            display: inline-block;
+            display: contents;
         }
         .transparent-link {
             position: absolute;
