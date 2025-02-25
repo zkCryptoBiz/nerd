@@ -1,4 +1,17 @@
-
+.image-container {
+            position: relative;
+            display: inline-block;
+        }
+        .transparent-link {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px; /* Размер зоны клика */
+            height: 50px; /* Размер зоны клика */
+            background: rgba(255, 255, 255, 0); /* Полностью прозрачный */
+            cursor: pointer;
+        }
 
 
 
