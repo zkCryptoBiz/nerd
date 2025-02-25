@@ -4,12 +4,12 @@
         }
         .transparent-link {
             position: absolute;
-            top: 50%;
-            left: 50%;
+            top: 72%;
+            left: 75%;
             transform: translate(-50%, -50%);
-            width: 150px; /* Размер зоны клика */
-            height: 50px; /* Размер зоны клика */
-            background: rgba(255, 255, 255, 0); /* Полностью прозрачный */
+            width: 250px; 
+            height: 100px; 
+            background: rgba(255, 255, 255, 0); 
             cursor: pointer;
         }
 
